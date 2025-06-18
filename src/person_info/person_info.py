@@ -290,7 +290,7 @@ class PersonInfoManager:
                 qv_name_prompt += f"你之前叫他{old_name}，是因为{old_reason}，"
 
             qv_name_prompt += f"\n其他取名的要求是：{request}，不要太浮夸，简短，"
-            qv_name_prompt += "\n请根据以上用户信息，想想你叫他什么比较好，不要太浮夸，请最好使用用户的qq昵称或群昵称原文，可以稍作修改，优先使用原文。优先使用用户的qq昵称或者群昵称原文。"
+            qv_name_prompt += "\n请根据以上用户信息，想想你叫他什么比较好，要有辨识度，不要太浮夸，可以使用用户的qq昵称或群昵称原文，可以稍作修改精简，优先使用用户的qq昵称或者群昵称原文，忽略昵称中的特殊符号或拟声词(如“喵”等)。"
 
             if existing_names_str:
                 qv_name_prompt += f"\n请注意，以下名称已被你尝试过或已知存在，请避免：{existing_names_str}。\n"

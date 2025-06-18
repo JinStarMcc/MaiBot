@@ -92,8 +92,8 @@ class Individuality:
         # 根据level添加人格侧面
         if level >= 2 and self.personality.personality_sides:
             personality_sides = list(self.personality.personality_sides)
-            random.shuffle(personality_sides)
             if level == 2:
+                random.shuffle(personality_sides)
                 prompt_personality += f"，有时也会{personality_sides[0]}"
             elif level == 3:
                 sides_str = "、".join(personality_sides)
@@ -129,8 +129,8 @@ class Individuality:
         # 根据level添加身份细节
         if level >= 1 and self.identity.identity_detail:
             identity_detail = list(self.identity.identity_detail)
-            random.shuffle(identity_detail)
             if level == 1:
+                random.shuffle(identity_detail)
                 identity_parts.append(f"{identity_detail[0]}")
             elif level >= 2:
                 details_str = "、".join(identity_detail)
