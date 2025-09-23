@@ -4,6 +4,13 @@
 
 当前Helm Chart对应的麦麦版本可以在`Chart.yaml`中查看`appVersion`项。
 
+## 可用的Helm Chart版本列表
+
+| Helm Chart版本   | 对应的MaiBot版本  |
+|----------------|--------------|
+| 0.10.3-beta    | 0.10.3-beta  |
+| 0.10.0-alpha.0 | 0.10.0-alpha |
+
 ## Values项说明
 
 `values.yaml`分为几个大部分。
@@ -76,3 +83,5 @@ adapter的ConfigMap是每次部署/更新Helm安装实例时动态生成的。
 不是所有存储卷的底层存储都支持`ReadWriteMany`访问模式。
 
 如果你的存储底层无法支持`ReadWriteMany`访问模式，你可以通过`nodeSelector`配置将statistics_dashboard与core调度到同一节点来避免问题。
+
+*如果启用了`sqlite-web`，那么上述问题也同样适用于`sqlite-web`与`core`，需要注意。*
